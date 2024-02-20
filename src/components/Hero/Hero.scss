@@ -1,0 +1,25 @@
+.hero-section {
+    @apply w-full relative min-h-screen flex flex-col justify-center items-center text-white transition-transform duration-150 ease-linear;
+
+    span {
+        @apply w-full h-full absolute top-0 z-10 bg-gradient-to-b from-black/10 to-black; 
+    }
+
+    .image-container {
+        @apply absolute top-0 z-0 w-full h-full object-cover object-center overflow-clip bg-center bg-cover bg-fixed;
+
+        background-image: url("/hero-bg.webp");
+
+            // img {
+            //     @apply w-full aspect-auto object-cover object-center;
+            // }
+    }
+
+    .hero-content {
+        @apply w-full z-10;
+
+        h1 {
+            @apply w-full text-7xl text-center font-bold;
+        }
+    }
+}
