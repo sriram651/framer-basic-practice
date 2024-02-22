@@ -1,0 +1,27 @@
+.overlap-card {
+    @apply sticky w-full max-w-3xl p-10 flex flex-col justify-start items-center gap-4 rounded-2xl shadow-xl;
+
+    h4 {
+        @apply w-max max-w-full text-center text-3xl font-bold;
+    }
+
+    .desc-image {
+        @apply w-full flex flex-row justify-between items-start gap-6;
+
+        p {
+            @apply w-max max-w-48 text-left text-sm md:text-base;
+        }
+
+        .image-container {
+            @apply w-full aspect-auto rounded-xl overflow-clip;
+
+            .image-inner-container {
+                @apply w-full aspect-auto object-cover object-center;
+                
+                img {
+                    @apply w-full aspect-auto object-cover object-center;
+                }
+            }
+        }
+    }
+}

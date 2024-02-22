@@ -8,6 +8,10 @@
 @import "@/components/StaggerList/StaggerList.scss";
 @import "@/components/ScrollMotion/ScrollMotion.scss";
 
+// Overlapping Cards Page Components
+@import "@/pages/overlapping-cards/OverlappingCards.scss";
+@import "@/components/OverlapCard/OverlapCard.scss";
+
 // *::-webkit-scrollbar {
 //     display: none;
 //     width: 0px;

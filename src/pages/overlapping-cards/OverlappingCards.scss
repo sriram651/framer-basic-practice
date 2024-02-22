@@ -1,0 +1,7 @@
+.overlap-card-page-container {
+    @apply w-full mt-[40vh];
+
+    .cards-container {
+        @apply w-full max-w-screen-md mx-auto flex flex-col justify-center items-start gap-20;
+    }
+}
