@@ -64,7 +64,7 @@ export default function StaggerList() {
                         }
                     }}
                     viewport={{
-                        once: true,
+                        once: false,
                     }}
                 >Staggered Animation Example</motion.h2>
                 <ul className='list'>
@@ -102,7 +102,7 @@ function ListItem({ item, index }) {
             whileInView="animate"
             variants={staggerAnimation}
             viewport={{
-                once: true,
+                once: false,
             }}
             custom={index}
             key={index}

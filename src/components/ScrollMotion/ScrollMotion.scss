@@ -1,0 +1,35 @@
+section.scroll-motion {
+    @apply w-full h-full;
+
+    .scroll-motion-container {
+        @apply relative w-full max-w-screen-2xl px-6 py-10 flex flex-col justify-start items-start;
+
+        .image-container {
+            @apply sticky top-2 w-full max-w-2xl aspect-auto max-h-svh object-center object-contain rounded-3xl overflow-clip origin-top-left;
+
+            img {
+                @apply w-full aspect-auto object-contain object-center;
+            }
+        }
+
+        .motion-element {
+            @apply w-max sticky top-6 left-6 max-w-60 bg-fuchsia-600 text-white p-4 rounded-md shadow-lg transition-transform duration-100 ease-linear;
+        }
+
+        .text-content-container {
+            @apply w-max flex flex-col justify-end items-start gap-10;
+
+            .text-content {
+                @apply w-max max-w-2xl flex flex-col justify-start items-start gap-2;
+
+                h3 {
+                    @apply text-xl font-bold text-left;
+                }
+
+                p {
+                    @apply w-full text-sm md:text-base text-left;
+                }
+            }
+        }
+    }
+}

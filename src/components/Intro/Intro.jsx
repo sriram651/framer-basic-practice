@@ -40,7 +40,7 @@ function GridItem({index}) {
             style={{
                 translateY,
                 scale,
-                transitionDelay: index,
+                opacity: scale
             }}
             ref={ref}
             className='grid-item'></motion.li>
