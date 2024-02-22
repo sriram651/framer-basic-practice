@@ -1,0 +1,55 @@
+header.animated-dropdown-header {
+    @apply w-full p-4 md:px-10 flex justify-end;
+
+    button {
+        @apply relative w-24 outline-none text-lg font-semibold rounded-2xl uppercase overflow-hidden;
+
+        .slider {
+            @apply relative w-full h-full;
+
+            .menu {
+                @apply w-full h-full relative bg-lime-400;
+            }
+
+            .close {
+                @apply w-full h-full absolute top-full bg-black text-white;
+            }
+
+            .perspective-text {
+                @apply w-full flex justify-center items-center will-change-transform transition-transform duration-300 ease-in;
+
+                transform-style: preserve-3d;
+
+                span {
+                    @apply block transition-all duration-300 ease-in;
+
+                    &:nth-of-type(1) {
+                        @apply translate-y-0 opacity-100;
+                    }
+
+                    &:nth-of-type(2) {
+                        @apply absolute opacity-0 origin-bottom;
+
+                        transform: rotateX(-90deg);
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .perspective-text {
+                transform: rotateX(90deg);
+
+                span {
+                    &:nth-of-type(1) {
+                        @apply -translate-y-full opacity-0;
+                    }
+
+                    &:nth-of-type(2) {
+                        @apply opacity-100;
+                    }
+                }
+            }
+        }
+    }
+}
