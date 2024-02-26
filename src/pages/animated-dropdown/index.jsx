@@ -9,7 +9,7 @@ export default function AnimatedDropdownPage() {
             <Head>
                 <title>Animated Dropdown | Sidemenus</title>
             </Head>
-            <div className='w-full max-w-screen-lg mx-auto font-mono'>
+            <div className='w-full max-w-screen-xl mx-auto font-mono'>
                 <Header />
             </div>
         </>

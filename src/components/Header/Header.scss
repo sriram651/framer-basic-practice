@@ -1,18 +1,24 @@
 header.animated-dropdown-header {
-    @apply w-full p-4 md:px-10 flex justify-end;
+    @apply relative w-full p-4 md:p-10 flex flex-col items-end justify-end;
 
-    button {
-        @apply relative w-24 outline-none text-lg font-semibold rounded-2xl uppercase overflow-hidden;
+    .menu-container {
+        @apply relative w-80 h-96 bg-lime-400 rounded-2xl origin-top-right;
+    }
+
+    button.header-menu-btn {
+        @apply absolute top-10 right-10 w-24 h-8 outline-none text-lg font-semibold rounded-2xl uppercase overflow-hidden;
+
+        z-index: 10;
 
         .slider {
             @apply relative w-full h-full;
 
             .menu {
-                @apply w-full h-full relative bg-lime-400;
+                @apply w-full h-full relative bg-lime-400 flex items-center;
             }
 
             .close {
-                @apply w-full h-full absolute top-full bg-black text-white;
+                @apply w-full h-full absolute top-full bg-black text-white flex items-center;
             }
 
             .perspective-text {
@@ -28,7 +34,7 @@ header.animated-dropdown-header {
                     }
 
                     &:nth-of-type(2) {
-                        @apply absolute opacity-0 origin-bottom;
+                        @apply absolute opacity-0;
 
                         transform: rotateX(-90deg);
                     }
@@ -36,7 +42,7 @@ header.animated-dropdown-header {
             }
         }
 
-        &:hover {
+        &:hover, &:focus-visible {
             .perspective-text {
                 transform: rotateX(90deg);
 
@@ -50,6 +56,10 @@ header.animated-dropdown-header {
                     }
                 }
             }
+        }
+
+        &:focus-visible {
+            @apply brightness-90;
         }
     }
 }
