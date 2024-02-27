@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import MenuButton from './MenuButton'
+import NavMenu from './NavMenu';
 
 export default function Header() {
     const [isActive, setIsActive] = useState(false);
@@ -10,11 +11,18 @@ export default function Header() {
             scale: 1,
             top: "-16px",
             right: "-16px",
+            transition: {
+                duration: 0.65
+            }
         },
         closed: {
             scale: 0,
             top: 0,
             right: 0,
+            transition: {
+                duration: 0.4,
+                delay: 0.3
+            }
         }
     }
     return (
@@ -28,7 +36,13 @@ export default function Header() {
                     ease: [0.25, 1, 0.5, 1]
                 }}
                 className="menu-container"
-            ></motion.div>
+            >
+                {isActive ? (
+                    <AnimatePresence>
+                        <NavMenu />
+                    </AnimatePresence>
+                ) : null}
+            </motion.div>
             <MenuButton isActive={isActive} setIsActive={setIsActive} />
         </header>
     )
