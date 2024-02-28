@@ -7,6 +7,7 @@
 @import "@/components/Intro/Intro.scss";
 @import "@/components/StaggerList/StaggerList.scss";
 @import "@/components/ScrollMotion/ScrollMotion.scss";
+@import "@/components/AnimatedBox/AnimatedBox.scss";
 
 // Overlapping Cards Page Components
 @import "@/pages/overlapping-cards/OverlappingCards.scss";
@@ -14,6 +15,9 @@
 
 // Sidemenu Page Components
 @import "@/components/Header/Header.scss";
+
+// Calendar Page Components
+@import "@/components/Calendar/Calendar.scss";
 
 // *::-webkit-scrollbar {
 //     display: none;

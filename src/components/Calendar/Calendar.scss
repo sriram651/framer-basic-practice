@@ -1,0 +1,7 @@
+.calendar-container {
+    @apply w-full grid grid-cols-7 gap-2;
+
+    h2 {
+        @apply w-full text-center font-bold;
+    }
+}

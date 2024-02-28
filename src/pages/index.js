@@ -4,6 +4,7 @@ import Lenis from '@studio-freight/lenis'
 import ScrollMotion from "@/components/ScrollMotion/ScrollMotion";
 import StaggerList from "@/components/StaggerList/StaggerList";
 import { useEffect } from "react";
+import AnimatedBox from "@/components/AnimatedBox/AnimatedBox";
 
 export default function Home() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Home() {
       <Intro />
       <StaggerList />
       <ScrollMotion />
+      <AnimatedBox />
     </div>
   );
 }
