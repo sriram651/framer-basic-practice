@@ -1,0 +1,47 @@
+aside.curved-menu {
+    @apply relative w-2/5 h-screen bg-black py-24 px-12 text-white font-medium text-3xl;
+
+    ul.nav-links {
+        @apply w-full flex flex-col justify-start items-start gap-8;
+    }
+}
+
+.curved-sidemenu-header {
+    @apply w-full fixed top-0 p-4;
+
+    button {
+        @apply relative w-12 aspect-square bg-pink-600 rounded-full transition-all duration-100 ease-in;
+
+        &:hover, &:focus-visible {
+            @apply bg-pink-700;
+        }
+
+        &::after, &::before {
+            @apply w-1/2 h-px left-1/2 -translate-x-1/2 absolute bg-white transition-transform duration-150 ease-in;
+            
+            content: "";
+        }
+
+        &::before {
+            @apply top-5;
+        }
+
+        &::after {
+            @apply top-7;
+        }
+
+        &.active {
+            &::before {
+                @apply rotate-45 top-6;
+            }
+    
+            &::after {
+                @apply -rotate-45 top-6;
+            }
+        }
+    }
+}
+
+svg.curved-svg {
+    @apply absolute top-0 -right-24 w-24 h-full fill-black stroke-none rotate-180;
+}
