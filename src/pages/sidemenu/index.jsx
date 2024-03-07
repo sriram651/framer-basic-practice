@@ -12,7 +12,6 @@ export default function AnimatedDropdownPage() {
             </Head>
             <div className='w-full max-w-screen-xl mx-auto font-mono'>
                 <Header />
-                <CurvedSidemenu />
             </div>
         </>
     )
